@@ -1,43 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Book Antiqua", serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #131313;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    background: #f4f4f4;
+    color: #131313;
+    transition: background-color 0.3s ease;
 }
 
-h1 {
-    margin: 0;
+header img {
+    border-radius: 50%;
+    max-width: 150px;
 }
 
-h2 {
-    margin-top: 5px;
+header:hover {
+    background: #ff5f92;
 }
 
-section {
-    margin: 20px;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background: #ff5f92;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+nav ul:hover {
+    background: #ff97bd;
 }
 
-li {
-    margin-bottom: 5px;
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    padding: 5px 20px;
+    line-height: 50px;
+    transition: 0.3s;
 }
 
-pre {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-left: 3px solid #333;
+nav a:hover {
+    background-color: #ff5f92;
 }
 
-code {
-    font-family: monospace;
+.nav-list {
+    list-style: none;
+    align-items: center;
+}
+
+.nav-link {
+    cursor: pointer;
+    padding: 0 20px;
+    line-height: 50px;
+    transition: 0.3s;
+}
+
+main {
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+  
+.section {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .section {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 430px) {
+    .container {
+      width: 100%;
+      padding: 0 5px;
+    }
+}
+
+footer {
+    text-align: center;
+    background: #ff5f92;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+footer img {
+    width: 50px;
+    height: auto;
+}
+
+footer:hover {
+    background: #ff97bd;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
 }
